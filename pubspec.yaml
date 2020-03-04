@@ -25,9 +25,53 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
 
+  # 状态管理
+  provider: ^3.1.0+1
+  scoped_model: ^1.0.1
+
+
+  # goodlook guide 液体
+  liquid_swipe: ^1.3.0
+
+  # 解析html
+  flutter_html: ^0.11.1
+
+  # sha1 加密
+  crypto: ^2.1.3
+
+  # 网络请求
+  dio: ^3.0.7
+
+  # 弱提示
+  fluttertoast: ^3.1.3
+
+  # 图片缓存
+  cached_network_image: ^2.0.0
+
+  # 写入文件
+  path_provider: ^1.5.1
+
+  # html
+  flutter_widget_from_html: ^0.3.2+1
+
+  # 缓存
+  shared_preferences: ^0.5.6
+
+  # webView
+  webview_flutter: ^0.3.18+1
+
+  # flare
+  flare_flutter: ^1.8.2
+
+  # 状态管理
+provider: ^3.1.0+1
+
+scoped_model: ^1.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -56,17 +100,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: Silom
+      fonts:
+        - asset: assets/fonts/Silom.ttf
+    - family: sans_bold
+      fonts: 
+        - asset: assets/fonts/sans_bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
