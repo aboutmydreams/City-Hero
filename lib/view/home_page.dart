@@ -41,8 +41,22 @@ class _HomePageState extends State<HomePage> {
             top: 0,
             left: 0,
             right: 0,
-            child: Container(
-              child: Text("data"),
+            child: AppBar(
+              backgroundColor: Colors.amber,
+              title: SafeArea(
+                child: Container(
+                  // margin: EdgeInsets.only(top: 50),
+                  color: Colors.amber,
+                  height: 90,
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(child: Container(child: Text("sad"))),
+                      Expanded(child: Container(child: Text("sad"))),
+                      Expanded(child: Container(child: Text("sad"))),
+                    ],
+                  ),
+                ),
+              ),
             ),
           )
         ],

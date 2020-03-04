@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:CityHero/component/app_ui.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatefulWidget {
@@ -25,6 +26,8 @@ class _FirstPageState extends State<FirstPage> {
       const Duration(milliseconds: 3000),
       () {
         try {
+          Navigator.pushNamedAndRemoveUntil(
+              context, "/", (route) => route == null);
           // ifLogin().then((haveUserLogin) {
           //   print("======haveUserLogin");
           //   print(haveUserLogin);
