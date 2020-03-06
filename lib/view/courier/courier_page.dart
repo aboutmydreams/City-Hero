@@ -1,4 +1,3 @@
-import 'package:CityHero/component/app_ui.dart';
 import 'package:CityHero/view/view/appbar.dart';
 import 'package:CityHero/view/view/float_buttom.dart';
 import 'package:flutter/material.dart';
