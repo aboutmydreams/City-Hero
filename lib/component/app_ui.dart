@@ -43,6 +43,7 @@ class AppStyles {
     fontFamily: "sans_bold",
     fontWeight: FontWeight.w700,
     fontSize: 15,
+    height: 1.7,
   );
 
   // 我的页面 下方文字 较细

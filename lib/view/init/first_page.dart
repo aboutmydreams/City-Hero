@@ -12,14 +12,14 @@ class _FirstPageState extends State<FirstPage> {
     super.initState();
 
     // 定时器
-    Timer initTime = new Timer(const Duration(milliseconds: 3), () {
-      // ifLogin().then((res) {
-      //   if (res) {
-      //     // 初始化数据
-      //     topModel.update();
-      //   }
-      // });
-    });
+    // Timer initTime = new Timer(const Duration(milliseconds: 3), () {
+    //   // ifLogin().then((res) {
+    //   //   if (res) {
+    //   //     // 初始化数据
+    //   //     topModel.update();
+    //   //   }
+    //   // });
+    // });
 
     // 定时器
     Timer timer = new Timer(

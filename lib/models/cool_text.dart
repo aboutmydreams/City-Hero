@@ -36,7 +36,7 @@ class _TypeTextState extends State<TypeText>
         CurvedAnimation(parent: animationController, curve: Curves.easeIn));
 
     animation.addListener(() {
-      print('${animation.value}');
+      // print('${animation.value}');
       setState(() {
         showText = widget.text.substring(0, animation.value);
         hideText = widget.text.substring(animation.value, widget.text.length);

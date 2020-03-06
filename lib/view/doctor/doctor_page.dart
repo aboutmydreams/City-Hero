@@ -3,14 +3,14 @@ import 'package:CityHero/view/view/appbar.dart';
 import 'package:CityHero/view/view/float_buttom.dart';
 import 'package:flutter/material.dart';
 
-class CourierPage extends StatefulWidget {
-  CourierPage({Key key}) : super(key: key);
+class DoctorPage extends StatefulWidget {
+  DoctorPage({Key key}) : super(key: key);
 
   @override
-  _CourierPageState createState() => _CourierPageState();
+  _DoctorPageState createState() => _DoctorPageState();
 }
 
-class _CourierPageState extends State<CourierPage> {
+class _DoctorPageState extends State<DoctorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class _CourierPageState extends State<CourierPage> {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Image.asset(
-          'assets/images/courier/home.png',
+          'assets/images/first.jpg',
           fit: BoxFit.cover,
         ),
         color: Colors.green,
