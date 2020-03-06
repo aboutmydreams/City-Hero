@@ -1,3 +1,4 @@
+import 'package:CityHero/component/app_ui.dart';
 import 'package:CityHero/view/courier/courier_page.dart';
 import 'package:flutter/material.dart';
 
@@ -58,13 +59,26 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.amber,
           title: SafeArea(
             child: Container(
+              margin: EdgeInsets.only(top: 10),
               color: Colors.amber,
               height: 90,
               child: Row(
                 children: <Widget>[
-                  Expanded(child: Container(child: Text("个人人数"))),
-                  Expanded(child: Container(child: Text("sad"))),
-                  Expanded(child: Container(child: Text("sad"))),
+                  Expanded(
+                    child: Container(
+                      child: Text("治愈/感染\n 200", style: AppStyles.textStyleB),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text("居民满意度\n -2.3", style: AppStyles.textStyleB),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text("影响力\n 21k", style: AppStyles.textStyleB),
+                    ),
+                  ),
                 ],
               ),
             ),
