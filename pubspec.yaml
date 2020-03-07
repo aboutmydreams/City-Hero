@@ -116,6 +116,7 @@ flutter:
   assets:
     - assets/images/logo.png
     - assets/images/first.jpg
+    - assets/images/startingPage.png
     - assets/images/courier/home.png
     - assets/images/courier/home.jpg
     - assets/images/courier/home_dead.jpg
