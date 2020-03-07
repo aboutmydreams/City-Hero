@@ -18,27 +18,18 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: Hero(
-                    tag: "appbar1",
-                    child: Container(
-                      child: Text("治愈/感染\n 23/43", style: AppStyles.textStyleB),
-                    ),
+                  child: Container(
+                    child: Text("治愈/感染\n 23/43", style: AppStyles.textStyleB),
                   ),
                 ),
                 Expanded(
-                  child: Hero(
-                    tag: "appbar2",
-                    child: Container(
-                      child: Text("居民满意度\n -2.3", style: AppStyles.textStyleB),
-                    ),
+                  child: Container(
+                    child: Text("居民满意度\n -2.3", style: AppStyles.textStyleB),
                   ),
                 ),
                 Expanded(
-                  child: Hero(
-                    tag: "appbar3",
-                    child: Container(
-                      child: Text("影响力\n 21k", style: AppStyles.textStyleB),
-                    ),
+                  child: Container(
+                    child: Text("影响力\n 21k", style: AppStyles.textStyleB),
                   ),
                 ),
               ],

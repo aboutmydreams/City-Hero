@@ -67,9 +67,6 @@ dependencies:
   # use svg
   flutter_svg: ^0.15.0
 
-  # 裁剪 我的页面顶部背景
-  flutter_custom_clippers: ^1.1.0
-
   # 列表动画
   flutter_staggered_animations: ^0.1.2
 
@@ -82,14 +79,11 @@ dependencies:
   # 图片放大
   photo_view: ^0.9.2
 
-  # 评论 下滑出的抽屉
+  # 对话 下滑出的抽屉
   sliding_up_panel: ^1.0.0
 
   # webView
   webview_flutter: ^0.3.18+1
-
-# flare
-flare_flutter: ^1.8.2
 
 # 状态管理
 provider: ^3.1.0+1

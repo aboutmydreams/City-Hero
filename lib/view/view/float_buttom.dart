@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class FloatIcon extends StatelessWidget {
-  const FloatIcon({Key key}) : super(key: key);
+  const FloatIcon({Key key, this.onPressed2, this.onPressed3})
+      : super(key: key);
+  final Function onPressed2;
+  final Function onPressed3;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,9 @@ class FloatIcon extends StatelessWidget {
           right: -20,
           child: RaisedButton(
             padding: EdgeInsets.all(7),
-            onPressed: () {},
+            onPressed: () {
+              onPressed2();
+            },
             color: Colors.red[300],
             child: Icon(
               Icons.track_changes,
@@ -46,7 +51,9 @@ class FloatIcon extends StatelessWidget {
           right: -20,
           child: RaisedButton(
             padding: EdgeInsets.all(7),
-            onPressed: () {},
+            onPressed: () {
+              onPressed3();
+            },
             color: Colors.red[300],
             child: Icon(
               Icons.hot_tub,
