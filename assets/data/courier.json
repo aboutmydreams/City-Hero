@@ -10,10 +10,26 @@
         "/assets/images/courier/image1.png",
         "https://url.cn/ncuos.jpg"
       ],
-      "condition": {},
+      "condition": {
+        "infection_num": [
+          1
+        ],
+        "joy_num": [
+          -5,
+          5
+        ],
+        "influence_num": [
+          -1
+        ],
+        "health_num": [
+          3
+        ],
+        "body_num": [
+          3
+        ]
+      },
       "plot_list": [
         {
-          "route": "/courier/delivery",
           "background": "/assets/images/courier/image1.png",
           "part": [
             "对话1",
@@ -76,12 +92,28 @@
       "plot_name": "出门送物资",
       "plot_id": 0,
       "summary": "xx医院有人发来消息，有物质到达，但由于堵车，需要有人骑摩托车将紧急物质送到目的地",
-      "route": "/courier/delivery",
       "image": [
         "/assets/images/courier/image1.png",
         "https://url.cn/ncuos.jpg"
       ],
-      "condition": {},
+      "condition": {
+        "infection_num": [
+          1
+        ],
+        "joy_num": [
+          -5,
+          5
+        ],
+        "influence_num": [
+          -1
+        ],
+        "health_num": [
+          3
+        ],
+        "body_num": [
+          3
+        ]
+      },
       "plot_list": [
         {
           "route": "/courier/delivery",
