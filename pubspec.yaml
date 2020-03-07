@@ -85,10 +85,6 @@ dependencies:
   # webView
   webview_flutter: ^0.3.18+1
 
-# 状态管理
-provider: ^3.1.0+1
-
-scoped_model: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -114,6 +110,7 @@ flutter:
     - assets/images/courier/home.png
     - assets/images/courier/home.jpg
     - assets/images/courier/home_dead.jpg
+    - assets/images/courier/human.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
