@@ -16,7 +16,6 @@ class TopStateModel extends Model {
       var data = json.decode(value);
       GameJson courierJson = GameJson.fromJson(data);
       _courierGameJson = courierJson;
-      print(courierJson.taskList[0].plotName);
       notifyListeners();
     });
   }

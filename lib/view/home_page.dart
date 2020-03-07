@@ -1,4 +1,5 @@
 import 'package:CityHero/component/app_ui.dart';
+import 'package:CityHero/models/small_widget/user_avatar.dart';
 import 'package:CityHero/view/courier/courier_page.dart';
 import 'package:CityHero/view/view/appbar.dart';
 import 'package:CityHero/view/view/float_buttom.dart';
@@ -33,36 +34,112 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      body: SingleChildScrollView(
-        child: Container(
-          margin: EdgeInsets.all(16),
-          child: Column(
-            children: <Widget>[
-              InkWell(
-                onTap: () {
-                  // changPage(1);
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, "/courier", (route) => route == null);
-                  // Navigator.of(context).pushNamed("/doctor");
-                },
+      body: Stack(
+        children: <Widget>[
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Opacity(
+              opacity: 0.2,
+              child: Image.asset(
+                "assets/images/home_page.png",
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Positioned(
+            child: SingleChildScrollView(
+              child: Center(
                 child: Container(
-                  margin: EdgeInsets.all(20),
-                  height: 200,
-                  width: 300,
-                  color: Colors.amber,
-                  child: Text("快递小哥"),
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromARGB(25, 0, 0, 0),
+                        offset: Offset(1, 2),
+                        blurRadius: 4,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(9.5)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      onePlayer(
+                        context,
+                        routeName: "/courier",
+                        title: "快递小哥",
+                        imageUrl: "assets/images/courier/human.png",
+                        summary: "这个城市总是需要有人去做那些看起来小事情，将整个城市连接起来。比如我。",
+                      )
+                    ],
+                  ),
                 ),
               ),
-              Container(
-                height: 200,
-                width: 300,
-                color: Colors.amber,
-                child: Text("data"),
-              ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
+}
+
+Widget onePlayer(BuildContext context,
+    {String routeName, String imageUrl, String title, String summary}) {
+  return InkWell(
+    onTap: () {
+      Navigator.pushNamedAndRemoveUntil(
+        context,
+        routeName,
+        (route) => route == null,
+      );
+    },
+    child: Container(
+      margin: EdgeInsets.only(top: 20, bottom: 20),
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.deepOrange.withOpacity(0.85),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromARGB(25, 0, 0, 0),
+            offset: Offset(1, 2),
+            blurRadius: 4,
+          ),
+        ],
+        borderRadius: BorderRadius.all(
+          Radius.circular(9.5),
+        ),
+      ),
+      height: 140,
+      width: MediaQuery.of(context).size.width * 0.94,
+      child: Row(
+        children: <Widget>[
+          userAvatar(imageUrl, height: 80),
+          Container(
+            padding: EdgeInsets.all(14),
+            width: MediaQuery.of(context).size.width * 0.64,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  title,
+                  style: AppStyles.textStyleA,
+                  maxLines: 3,
+                ),
+                Text(
+                  summary,
+                  style: AppStyles.textStyleBB,
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }

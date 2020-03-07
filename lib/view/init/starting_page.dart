@@ -49,7 +49,8 @@ class StartingPage extends StatelessWidget {
                   SizedBox(height: 120),
                   RaisedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/');
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, "/", (route) => route == null);
                     },
                     textColor: Colors.black,
                     child: Text('开始游戏', style: TextStyle(fontSize: 20)),
