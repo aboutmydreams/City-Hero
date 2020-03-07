@@ -52,14 +52,19 @@ class _TypeTextState extends State<TypeText>
   Widget build(BuildContext context) {
     // return Text(showText);
     return RichText(
-      maxLines: 5,
+      maxLines: 50,
       overflow: TextOverflow.ellipsis,
-      text: TextSpan(children: <TextSpan>[
-        TextSpan(text: showText, style: widget.style),
-        TextSpan(
+      text: TextSpan(
+        children: <TextSpan>[
+          TextSpan(text: showText, style: widget.style),
+          TextSpan(
             text: hideText,
-            style: widget.style.copyWith(color: Colors.transparent))
-      ]),
+            style: widget.style.copyWith(
+              color: Colors.transparent,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

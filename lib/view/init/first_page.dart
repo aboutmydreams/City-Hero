@@ -60,7 +60,7 @@ class _FirstPageState extends State<FirstPage> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.width * 0.7,
               child: Image.asset(
-                'assets/images/first.jpg',
+                'assets/images/courier/home_dead.jpg',
                 fit: BoxFit.cover,
               ),
               color: Colors.green,
