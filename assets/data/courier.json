@@ -89,7 +89,94 @@
       ]
     },
     {
-      "plot_name": "出门送物资",
+      "plot_name": "出门送物资2",
+      "plot_id": 0,
+      "summary": "xx医院有人发来消息，有物质到达，但由于堵车，需要有人骑摩托车将紧急物质送到目的地",
+      "image": [
+        "/assets/images/courier/image1.png",
+        "https://url.cn/ncuos.jpg"
+      ],
+      "condition": {
+        "infection_num": [
+          1
+        ],
+        "joy_num": [
+          -5,
+          5
+        ],
+        "influence_num": [
+          -1
+        ],
+        "health_num": [
+          3
+        ],
+        "body_num": [
+          3
+        ]
+      },
+      "plot_list": [
+        {
+          "route": "/courier/delivery",
+          "background": "/assets/images/courier/image1.png",
+          "part": [
+            "对话1",
+            "对话2",
+            "对话3"
+          ],
+          "choose_title": "你打算帮助医生送口罩吗？",
+          "choose": [
+            {
+              "option": "不帮",
+              "to_route": "/courier/ending1",
+              "last_part": [
+                "那我先去给快递包装消下毒",
+                "一会别被感染了"
+              ],
+              "effect_me": {
+                "health": 0,
+                "strength": 0,
+                "influence": 0
+              },
+              "effect_all": [
+                {
+                  "math_name": "add_infection",
+                  "param": 10
+                },
+                {
+                  "math_name": "add_influence",
+                  "param": 10
+                }
+              ]
+            },
+            {
+              "option": "我是好心人，这个忙一定帮",
+              "to_route": "/courier/courier_to_doctor",
+              "last_part": [
+                "那我先去给快递包装消下毒",
+                "一会别被感染了"
+              ],
+              "effect_me": {
+                "health": -3,
+                "strength": -4,
+                "influence": 10
+              },
+              "effect_all": [
+                {
+                  "math_name": "add_infection",
+                  "param": 10
+                },
+                {
+                  "math_name": "add_influence",
+                  "param": 10
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "plot_name": "出门送物资2",
       "plot_id": 0,
       "summary": "xx医院有人发来消息，有物质到达，但由于堵车，需要有人骑摩托车将紧急物质送到目的地",
       "image": [

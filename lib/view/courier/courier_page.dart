@@ -1,5 +1,10 @@
+import 'package:CityHero/component/app_ui.dart';
+import 'package:CityHero/state_manage/data/game_data.dart';
+import 'package:CityHero/state_manage/top.dart';
+import 'package:CityHero/view/courier/view/floating_collapsed.dart';
 import 'package:CityHero/view/view/appbar.dart';
 import 'package:CityHero/view/view/float_buttom.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
@@ -43,8 +48,8 @@ class _CourierPageState extends State<CourierPage> {
         controller: _pc,
         maxHeight: MediaQuery.of(context).size.height * 0.8,
         renderPanelSheet: false,
-        panel: _floatingPanel(),
-        collapsed: _floatingCollapsed(),
+        panel: _floatingPanel(context),
+        collapsed: floatingCollapsed(),
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
@@ -59,24 +64,7 @@ class _CourierPageState extends State<CourierPage> {
   }
 }
 
-Widget _floatingCollapsed() {
-  return Container(
-    decoration: BoxDecoration(
-      color: Colors.blueGrey,
-      borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(24.0), topRight: Radius.circular(24.0)),
-    ),
-    margin: const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0),
-    child: Center(
-      child: Text(
-        "有新的可接任务（上滑显示）",
-        style: TextStyle(color: Colors.white),
-      ),
-    ),
-  );
-}
-
-Widget _floatingPanel() {
+Widget _floatingPanel(BuildContext context) {
   return Container(
     decoration: BoxDecoration(
         color: Colors.white,
@@ -88,8 +76,29 @@ Widget _floatingPanel() {
           ),
         ]),
     margin: const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 140),
-    child: Center(
-      child: Text("This is the SlidingUpPanel when open"),
+    child: ListView(
+      scrollDirection: Axis.horizontal,
+      children: topModel.courierGameData.taskList.map((task) {
+        return oneTask(context, task);
+      }).toList(),
+    ),
+  );
+}
+
+Widget oneTask(BuildContext context, TaskList task) {
+  return Container(
+    width: 200,
+    margin: EdgeInsets.all(20),
+    child: Column(
+      children: <Widget>[
+        Text(
+          "${task.plotName}",
+          style: AppStyles.textStyleA,
+        ),
+        CachedNetworkImage(
+            imageUrl:
+                "https://cdn.nlark.com/yuque/0/2020/png/164272/1583605073541-3c07d189-619b-4979-8373-ca730909ad3b.png")
+      ],
     ),
   );
 }
