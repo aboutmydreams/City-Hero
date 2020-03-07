@@ -74,9 +74,26 @@ class _HomePageState extends State<HomePage> {
                         context,
                         routeName: "/courier",
                         title: "快递小哥",
-                        imageUrl: "assets/images/courier/human.png",
+                        color: Colors.deepOrange[400].withOpacity(0.65),
+                        imageUrl: "assets/images/courier/courier.jpg",
                         summary: "这个城市总是需要有人去做那些看起来小事情，将整个城市连接起来。比如我。",
-                      )
+                      ),
+                      onePlayer(
+                        context,
+                        routeName: "/courier",
+                        title: "医务人员",
+                        color: Colors.greenAccent.withBlue(2).withOpacity(0.65),
+                        imageUrl: "assets/images/doctor/doctor.png",
+                        summary: "这是艰难无硝烟的战场，你和病魔零距离，我亦追随人道主义的身影",
+                      ),
+                      onePlayer(
+                        context,
+                        routeName: "/courier",
+                        title: "记者",
+                        color: Colors.yellow.withOpacity(0.65),
+                        imageUrl: "assets/images/doctor/doctor.png",
+                        summary: "所经历的劳累、疲惫、委屈、欣慰，酸甜苦辣全都浸透寻找真相的道路上",
+                      ),
                     ],
                   ),
                 ),
@@ -90,7 +107,11 @@ class _HomePageState extends State<HomePage> {
 }
 
 Widget onePlayer(BuildContext context,
-    {String routeName, String imageUrl, String title, String summary}) {
+    {String routeName,
+    String imageUrl,
+    String title,
+    String summary,
+    Color color}) {
   return InkWell(
     onTap: () {
       Navigator.pushNamedAndRemoveUntil(
@@ -100,10 +121,10 @@ Widget onePlayer(BuildContext context,
       );
     },
     child: Container(
-      margin: EdgeInsets.only(top: 20, bottom: 20),
+      margin: EdgeInsets.only(top: 20, bottom: 10),
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.deepOrange.withOpacity(0.85),
+        color: color,
         boxShadow: [
           BoxShadow(
             color: Color.fromARGB(25, 0, 0, 0),
