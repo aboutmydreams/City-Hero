@@ -87,17 +87,51 @@ Widget _floatingPanel(BuildContext context) {
 
 Widget oneTask(BuildContext context, TaskList task) {
   return Container(
-    width: 200,
+    width: 260,
     margin: EdgeInsets.all(20),
     child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
           "${task.plotName}",
           style: AppStyles.textStyleA,
         ),
         CachedNetworkImage(
-            imageUrl:
-                "https://cdn.nlark.com/yuque/0/2020/png/164272/1583605073541-3c07d189-619b-4979-8373-ca730909ad3b.png")
+          imageUrl:
+              "https://cdn.nlark.com/yuque/0/2020/png/164272/1583605073541-3c07d189-619b-4979-8373-ca730909ad3b.png",
+        ),
+        Text(
+          "${task.summary}",
+          style: AppStyles.textStyleB,
+        ),
+        Container(
+          height: 60,
+          width: MediaQuery.of(context).size.width * 0.7,
+          margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Colors.yellow.withOpacity(0.8),
+            borderRadius: BorderRadius.all(Radius.circular(30)),
+          ),
+          child: FlatButton(
+            onPressed: () {
+              // Navigator.pushNamedAndRemoveUntil(
+              //   context,
+              //   "/",
+              //   (route) => route == null,
+              // );
+            },
+            child: Text(
+              "前往",
+              style: TextStyle(
+                color: AppColors.accentText,
+                fontFamily: "sans_bold",
+                fontWeight: FontWeight.w700,
+                fontSize: 17,
+                letterSpacing: 2,
+              ),
+            ),
+          ),
+        ),
       ],
     ),
   );
