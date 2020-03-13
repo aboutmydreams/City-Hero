@@ -25,7 +25,7 @@
 ### 2、游戏背景
 故事开始于一位在武汉工作中的快递小哥，全程关注并为疫情奉献着自己的力量。<br />如果你在封城前得到消息，你会选择离开武汉吗？<br />在物资缺乏的情况下，你是否愿意冒着奉献搭送医护人员？<br />当你看见某些患者对医生举措非常无礼时，你会选择如何阻止？<br />当你被要求帮助送双黄连到用户家时，你是否会接受请求？
 
-具体游戏机制设计[https://www.yuque.com/cityheros/project/kbf4zp](https://www.yuque.com/cityheros/project/kbf4zp)<br />总之，武汉是一座英雄的城市，你会想成为守护这个城市的CITY-HERO吗？
+具体游戏机制设计[https://www.yuque.com/cityheroes/project/kbf4zp](https://www.yuque.com/cityheros/project/kbf4zp)<br />总之，武汉是一座英雄的城市，你会想成为守护这个城市的CITY-HERO吗？
 
 <a name="Q06Sc"></a>
 ### 3、游戏结局
