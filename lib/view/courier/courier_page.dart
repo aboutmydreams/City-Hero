@@ -114,11 +114,11 @@ Widget oneTask(BuildContext context, TaskList task) {
           ),
           child: FlatButton(
             onPressed: () {
-              // Navigator.pushNamedAndRemoveUntil(
-              //   context,
-              //   "/",
-              //   (route) => route == null,
-              // );
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                "${task.route}",
+                (route) => route == null,
+              );
             },
             child: Text(
               "前往",

@@ -1,4 +1,5 @@
 import 'package:CityHero/view/courier/courier_page.dart';
+import 'package:CityHero/view/courier/plots/delivery.dart';
 import 'package:CityHero/view/doctor/doctor_page.dart';
 import 'package:CityHero/view/home_page.dart';
 import 'package:CityHero/view/init/first_page.dart';
@@ -13,4 +14,5 @@ Map<String, WidgetBuilder> routeData = {
   '/intro': (context) => GameIntro(),
   '/courier': (context) => CourierPage(),
   '/doctor': (context) => DoctorPage(),
+  '/courier/delivery': (context) => DeliveryPage(),
 };

@@ -7,7 +7,7 @@
       "summary": "xx医院有人发来消息，有物质到达，但由于堵车，需要有人骑摩托车将紧急物质送到目的地",
       "route": "/courier/delivery",
       "image": [
-        "/assets/images/courier/image1.png",
+        "https://pic4.zhimg.com/80/v2-76153d2a2ca36d6e947fd52f99a48d04_1440w.jpg",
         "https://url.cn/ncuos.jpg"
       ],
       "condition": {
@@ -30,7 +30,7 @@
       },
       "plot_list": [
         {
-          "background": "/assets/images/courier/image1.png",
+          "background": "https://pic4.zhimg.com/80/v2-348de553bf5d97fea9025ded60565747_1440w.jpg",
           "part": [
             "对话1",
             "对话2",
@@ -94,7 +94,7 @@
       "summary": "xx医院有人发来消息，有物质到达，但由于堵车，需要有人骑摩托车将紧急物质送到目的地",
       "image": [
         "/assets/images/courier/image1.png",
-        "https://url.cn/ncuos.jpg"
+        "https://pic3.zhimg.com/80/v2-52af43dcdb6621f32e75484694f77fa4_1440w.jpg"
       ],
       "condition": {
         "infection_num": [
